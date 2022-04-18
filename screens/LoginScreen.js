@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-function LoginScreen(props) {
+function LoginScreen({ navigation }) {
   return (
     <View style={styles.container}>
       {/* title */}
@@ -61,6 +61,9 @@ function LoginScreen(props) {
             justifyContent: "center",
             alignItems: "center",
           }}
+          onPress={() =>
+            navigation.navigate("NestedTabs", { screen: "HomeScreen" })
+          }
         >
           <Text style={{ fontWeight: "700", color: "black", fontSize: 20 }}>
             Login
